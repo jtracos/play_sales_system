@@ -10,3 +10,5 @@ target
 /.metals
 /.vscode
 /.g8
+/.bloop
+/.scala
