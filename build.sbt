@@ -3,7 +3,14 @@ organization := "com.jtracos"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala).dependsOn(common)
+lazy val common = (project in file("common")).settings(commonSetting)
+
+val commonSetting = Seq(
+  organization := "com.common",
+  version := "1.0-SNAPSHOT" ,
+  scalaVersion := "2.13.18"
+)
 
 scalaVersion := "2.13.18"
 
