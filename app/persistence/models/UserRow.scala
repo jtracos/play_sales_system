@@ -1,10 +1,10 @@
 package persistence.models
 
-import org.joda.time.DateTime
+import org.joda.time.{DateTime, LocalDate}
 
 case class UserRow (
                      id:Option[Long],
-                     fullName: String,
-                     birthDate:DateTime,
-                     updatedAt: DateTime
+                     fullName:String,
+                     birthDate:Option[LocalDate],
+                     updatedAt:Option[DateTime]
                    )
